@@ -1,0 +1,436 @@
+:root {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #172033;
+
+    background: #f4f7fb;
+
+    line-height: 1.6;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7ff,
+            #eef6ff
+        );
+}
+
+
+.container {
+    width: min(960px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        50px
+        0
+        80px;
+}
+
+
+/* --------------------------------------------------
+   Hero
+-------------------------------------------------- */
+
+.hero {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.logo {
+    font-size: 1.1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.03em;
+
+    margin-bottom: 14px;
+}
+
+
+.hero h1 {
+    margin: 0 0 15px;
+
+    font-size:
+        clamp(
+            2.1rem,
+            5vw,
+            3.6rem
+        );
+
+    line-height: 1.05;
+}
+
+
+.hero p {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #606b7d;
+
+    font-size: 1.05rem;
+}
+
+
+/* --------------------------------------------------
+   Cards
+-------------------------------------------------- */
+
+.card {
+    background: white;
+
+    border:
+        1px solid
+        #e1e7f0;
+
+    border-radius: 20px;
+
+    padding: 26px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(30, 50, 80, 0.07);
+}
+
+
+/* --------------------------------------------------
+   Toolbar
+-------------------------------------------------- */
+
+.toolbar {
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.toolbar .field {
+    flex: 1;
+}
+
+
+label {
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    color: #273247;
+}
+
+
+select,
+textarea {
+    font: inherit;
+
+    border:
+        1px solid
+        #ccd5e2;
+
+    background: white;
+
+    border-radius: 12px;
+
+    outline: none;
+}
+
+
+select {
+    padding:
+        11px
+        13px;
+}
+
+
+textarea {
+    width: 100%;
+
+    resize: vertical;
+
+    min-height: 200px;
+
+    padding: 15px;
+}
+
+
+textarea:focus,
+select:focus {
+    border-color: #667eea;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(102, 126, 234, 0.13);
+}
+
+
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
+
+.actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 17px;
+}
+
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    padding:
+        12px
+        20px;
+
+    font: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+
+button:disabled {
+    opacity: 0.55;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+.primary-button {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #6366f1
+        );
+}
+
+
+.secondary-button {
+    color: #273247;
+
+    background: #edf0f5;
+}
+
+
+/* --------------------------------------------------
+   Status
+-------------------------------------------------- */
+
+.status {
+    min-height: 30px;
+
+    margin:
+        15px
+        4px;
+
+    color: #5d687a;
+}
+
+
+.error {
+    padding: 13px;
+
+    border-radius: 10px;
+
+    color: #a51d2d;
+
+    background: #fff1f3;
+
+    border:
+        1px solid
+        #ffd0d6;
+}
+
+
+/* --------------------------------------------------
+   Result
+-------------------------------------------------- */
+
+.result {
+    margin-top: 10px;
+
+    white-space: normal;
+}
+
+
+.result h2 {
+    margin-top: 0;
+}
+
+
+.result-content {
+    color: #3c4657;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* --------------------------------------------------
+   Quiz
+-------------------------------------------------- */
+
+.quiz-question {
+    border-top:
+        1px solid
+        #e6eaf0;
+
+    padding:
+        20px
+        0;
+}
+
+
+.quiz-question:first-child {
+    border-top: none;
+}
+
+
+.quiz-question h3 {
+    margin-top: 0;
+}
+
+
+.option {
+    display: block;
+
+    width: 100%;
+
+    text-align: left;
+
+    margin:
+        8px
+        0;
+
+    color: #273247;
+
+    background: #f8f9fc;
+
+    border:
+        1px solid
+        #dce2eb;
+}
+
+
+.option:hover {
+    background: #f0f2f8;
+}
+
+
+.option.correct {
+    background: #ecfaf3;
+
+    border-color: #2da36b;
+
+    color: #146c43;
+}
+
+
+.option.wrong {
+    background: #fff1f3;
+
+    border-color: #d94c61;
+
+    color: #a61b2b;
+}
+
+
+.explanation {
+    margin-top: 12px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    color: #566174;
+
+    background: #f6f8fb;
+
+    font-size: 0.94rem;
+}
+
+
+/* --------------------------------------------------
+   Responsive
+-------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .container {
+        padding-top: 30px;
+    }
+
+
+    .card {
+        padding: 18px;
+    }
+
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+
+    .actions {
+        flex-direction: column;
+    }
+
+
+    button {
+        width: 100%;
+    }
+
+}
